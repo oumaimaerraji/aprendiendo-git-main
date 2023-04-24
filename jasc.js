@@ -40,6 +40,7 @@ var respuesta4=['<header>','title', '<list>',' id', 'doctype', 'Hard Text Mask L
 
 //las respuestas correctas
 
+var correctasHTML = ["<header>", " alt", "<ul>", "dir", "doctype", "Hyper Text Markup Language", "<br/>", "<a href=» «>…</a>", "<tr>", "<a href=»#» target=»_self»>…</a>"];
 
 
 
