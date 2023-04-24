@@ -1,0 +1,76 @@
+/* dimensiones de la pagina*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 60vw;
+  height: 80vh;
+  margin:0  auto ;
+  border: 2px solid black;
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+/* posicion del navegador */
+.headerTest {
+  height: 20vh;
+  background-color: aqua;
+ 
+}
+.presentacion {
+  text-align: center;
+  margin: 2%;
+}
+
+.navegar {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.navegar li {
+  background-color: rgba(10, 112, 10, 0.751);
+  width: max-content;
+  height: max-content;
+  border-radius: 5px;
+}
+.navegar li :hover {
+  border-radius: 5px;
+  background-color: rgba(21, 52, 21, 0.911);
+}
+
+.navegar li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.2em;
+}
+/* posicines del main  */
+.mainTest {
+  
+  background-color: aquamarine;
+  height: 33vh;
+  width: 59.vw;
+  border: 2px solid;
+}
+
+/* posicionamiento del footer  */
+.footerTest {
+
+  top: 55vh;
+  width: 59.vw;
+  height: 20vh;
+}
+
+.resultado {
+  border: 1px solid black;
+  padding: 25px 50px 75px;
+  background-color: lightblue;
+  text-align: center;
+}
+.resultado input {
+  background: rgb(122, 154, 8);
+  width: 3vw;
+  height: 3vh;
+  margin: 1%;
+}
