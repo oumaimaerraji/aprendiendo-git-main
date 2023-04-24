@@ -22,23 +22,22 @@ var pregHTML = [
 
 ];
 
-
 //las 4 respuestas
 
-var respuesta1 = ['h1','alt','<ol>', 'dir', 'type', 'Hyper Text Mask Language', '</br>', '<a title=» «>…</>', '<ol>', '<link href=»#» target=»_blank»>…</link>']
+var respuestaHTML1 = ['h1','alt','<ol>', 'dir', 'type', 'Hyper Text Mask Language', '</br>', '<a title=» «>…</>', '<ol>', '<link href=»#» target=»_blank»>…</link>']
 
     
-var respuesta2=['<title>','src','<li>','lang', 'class', 'Hard Text Markup Language', '<br/>', '<a href=» «>…</a>', '<tr>', ' <link href=»#» target=»_self»>…</link>']
+var respuestaHTML2=['<title>','src','<li>','lang', 'class', 'Hard Text Markup Language', '<br/>', '<a href=» «>…</a>', '<tr>', ' <link href=»#» target=»_self»>…</link>']
 
 
-var respuesta3=['<head>', 'href', '<ul>', 'class', 'lang', 'Hyper Text Markup Language', ' <breakLine>', ' <a src=» «>…</a>', '<li>', '<a href=»#» target=»_blank»>…</a>']
+var respuestaHTML3=['<head>', 'href', '<ul>', 'class', 'lang', 'Hyper Text Markup Language', ' <breakLine>', ' <a src=» «>…</a>', '<li>', '<a href=»#» target=»_blank»>…</a>']
 
 
-var respuesta4=['<header>','title', '<list>',' id', 'doctype', 'Hard Text Mask Language','<hr>', '<link href=» «>…<link>', '<list>', '<a href=»#» target=»_self»>…</a>']
+var respuestaHTML4=['<header>','title', '<list>',' id', 'doctype', 'Hard Text Mask Language','<hr>', '<link href=» «>…<link>', '<list>', '<a href=»#» target=»_self»>…</a>']
 
 
 
-//las respuestas correctas
+//las respuestas correctas de HTML
 
 var correctasHTML = ["<header>", " alt", "<ul>", "dir", "doctype", "Hyper Text Markup Language", "<br/>", "<a href=» «>…</a>", "<tr>", "<a href=»#» target=»_self»>…</a>"];
 
