@@ -112,7 +112,7 @@ var respuestaform4 = ['<label>', 'placeholder', 'name', '<input type="email">', 
 var correctasform = ['<form>', 'type', 'for', '<input type="password">', '<input type="password">', 'value', '<input type="submit">', 'value', '<input type="email">', 'selected']
 
 
-//dar funcionalidad al button aceptar
+//dar funcionalidad al button aceptar para pasar a la siguiente pregunta 
 var pre =pregHTML
 var myButton = document.getElementById("myButton");
 
