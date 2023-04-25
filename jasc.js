@@ -110,3 +110,14 @@ var respuestaform2 = ['<input>', 'name', 'id', '<input type="password">', '<inpu
 var respuestaform3 = ['<button>', 'value', ' class', '<textarea>', '<textarea>', 'name', 'button>', 'type', '<input type="email">', 'name']
 var respuestaform4 = ['<label>', 'placeholder', 'name', '<input type="email">', '<input type="email">', 'id', '<submit>', 'placeholder', '<textarea>', 'id']
 var correctasform = ['<form>', 'type', 'for', '<input type="password">', '<input type="password">', 'value', '<input type="submit">', 'value', '<input type="email">', 'selected']
+
+
+//dar funcionalidad al button aceptar
+var pre =pregHTML
+var myButton = document.getElementById("myButton");
+
+myButton.addEventListener("click", function () {
+    window.location.href = 'preg';
+    alert("Button clicked!");
+}
+

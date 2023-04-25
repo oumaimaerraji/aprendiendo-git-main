@@ -26,7 +26,7 @@
     </header>
     <main class="mainTest">
         <div class="preg">
-            <input type="text" id="pregunta">
+            <input type="text" oninput="myFunction()" id="pregunta" disabled>
         </div>
         <div class="respu">
             <ol>
@@ -38,7 +38,7 @@
 
         </div>
         <div class="acpt">
-            <input type="button" value="aceptar">
+            <input type="button" id="myButton" onclick="myFunction()" value="aceptar">
         </div>
     </main>
     <footer class="footerTest">
