@@ -6,41 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/stform.css">
+    <link rel="stylesheet" href="stform.css">
 </head>
 
 <body>
+    <!--HEADER-->
     <header class="headerTest">
         <div class="presentacion">
-            <h1>Test para Repasar los Conocimientos</h1>
-            <h2>Elija la opcion deseada para empezar el Test</h2>
+            <h1 id="tit1">Test para Repasar los Conocimientos</h1>
+            <h2 id="tit2">Elija la opcion deseada para empezar el Test</h2>
         </div>
         <nav>
             <ol class="navegar" id="navegar">
-                <li><a href="#" id="html">HTML</a></li>
+                <li><a href="#" id="html" >HTML</a></li>
                 <li><a href="#" id="css">CSS</a></li>
-                <li><a href="#" id="formulario">FORMULARIO</a></li>
+                <li><a href="#" id="formulario" onclick="botonform()">FORMULARIO</a></li>
             </ol>
         </nav>
         <br>
     </header>
+
+    <!--MAIN-->
     <main class="mainTest">
-        <div class="preg">
-            <input type="text" oninput="myFunction()" id="pregunta" disabled>
+        <div class="pregunta" oninput="siguiente()">
+            <input type="text" id="preguntas" value="" disabled>
         </div>
-        <div class="respu">
+        <div class="respuesta">
             <ol>
-                <li><input type="radio" name="" id=""></li>
-                <li><input type="radio" name="" id=""></li>
-                <li><input type="radio" name="" id=""></li>
-                <li><input type="radio" name="" id=""></li>
+                <li><input type="radio" name=""><input type="text" value="" id="a"></li>
+                <li><input type="radio" name=""><input type="text" value="" id="b"></li>
+                <li><input type="radio" name=""><input type="text" value="" id="c"></li>
+                <li><input type="radio" name=""><input type="text" value="" id="d"></li>
             </ol>
 
         </div>
-        <div class="acpt">
-            <input type="button" id="myButton" onclick="myFunction()" value="aceptar">
+        <div class="aceptar">
+            <input type="button" onclick="siguiente()" value="continuar">
+            <input type="button" value="terminar">
         </div>
     </main>
+
+    <!--FOOTER-->
     <footer class="footerTest">
         <div class="resultado" id="resultado">
             <label for="uno">Preguntas Correctas</label>
@@ -51,7 +57,7 @@
             <input type="text" name="tres" id="">
         </div>
     </footer>
-    <script src="./jasc.js"></script>
+    <script src="jasc.js"></script>
 </body>
 
 </html>

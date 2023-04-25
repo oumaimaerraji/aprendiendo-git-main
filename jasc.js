@@ -91,7 +91,6 @@ var pregform = [
 
     "6. ¿Cuál es el atributo HTML que se utiliza para especificar una opción en un elemento de lista desplegable?",
 
-
     "7. ¿Cuál es el elemento HTML que se utiliza para crear un botón de envío de un formulario?",
 
     "8. ¿Cuál es el atributo HTML que se utiliza para especificar el valor predeterminado de un campo de formulario?",
@@ -103,7 +102,7 @@ var pregform = [
 ];
 
 
-//las 4 respuestas
+//las 4 respuestas del form
 
 var respuestaform1 = ['<form>', 'type', 'for', '<input type="text">', '<input type="text">', 'value', '<input type="submit">', 'value', '<input type="text">', 'selected']
 var respuestaform2 = ['<input>', 'name', 'id', '<input type="password">', '<input type="password">', 'selected', '<input type="reset">', 'name', '<input type="password">', 'value']
@@ -112,12 +111,76 @@ var respuestaform4 = ['<label>', 'placeholder', 'name', '<input type="email">', 
 var correctasform = ['<form>', 'type', 'for', '<input type="password">', '<input type="password">', 'value', '<input type="submit">', 'value', '<input type="email">', 'selected']
 
 
-//dar funcionalidad al button aceptar para pasar a la siguiente pregunta 
-var pre =pregHTML
-var myButton = document.getElementById("myButton");
 
-myButton.addEventListener("click", function () {
-    window.location.href = 'preg';
-    alert("Button clicked!");
+
+//dar funcionalidad al button aceptar para pasar a la siguiente pregunta 
+function botonform(){
+    document.getElementById('preguntas').value=pregform[0];
+    document.getElementById('a').value=respuestaform1[0];
+    document.getElementById('b').value=respuestaform2[0];
+    document.getElementById('c').value=respuestaform3[0];
+    document.getElementById('d').value=respuestaform4[0];
+} 
+
+
+
+
+
+function siguiente(){
+
+    var indice_aleatorio = Math.floor(Math.random()*pregform.length);
+    preguntasaleatorias=indice_aleatorio;
+
+ document.getElementById('preguntas').value=pregform[preguntasaleatorias];
+
+ document.getElementById('a').value=respuestaform1[preguntasaleatorias];
+ document.getElementById('b').value=respuestaform2[preguntasaleatorias];
+ document.getElementById('c').value=respuestaform3[preguntasaleatorias];
+ document.getElementById('d').value=respuestaform4[preguntasaleatorias];
 }
 
+// -------------------------------------------------FUNCION DE VALIDAR RESPUESTA--------------------------------------------------------
+
+
+function validarRespuesta(respuestaUsuario, respuestaCorrecta) {
+        // Comprobamos si la respuesta del usuario es igual a la respuesta correcta
+        if (respuestaUsuario === respuestaCorrecta) {
+            // Si es así, devolvemos true
+            return true;
+        } else {
+            // Si no, devolvemos false
+            return false;
+        }
+    }
+  
+  function validarRespuestas(respuestasUsuario, respuestasCorrectas) {
+        // Creamos una variable para almacenar el número de respuestas correctas
+        let numRespuestasCorrectas = 0;
+
+        // Iteramos a través de las respuestas del usuario y las respuestas correctas
+        for (let i = 0; i < respuestasUsuario.length; i++) {
+            // Comprobamos si el usuario ha respondido a la pregunta
+            if (respuestasUsuario[i] !== "") {
+                // Si el usuario ha respondido, comparamos su respuesta con la respuesta correcta correspondiente
+                if (validarRespuesta(respuestasUsuario[i], respuestasCorrectas[i])) {
+                    // Si la respuesta es correcta, incrementamos el contador de respuestas correctas
+                    numRespuestasCorrectas++;
+                }
+            }
+        }
+
+        // Devolvemos el número total de respuestas correctas
+        return numRespuestasCorrectas;
+    }
+
+  // Supongamos que las respuestas correctas son las siguientes (en este caso, todas las respuestas son "A")
+  const respuestasCorrectas = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"];
+
+// Supongamos que las respuestas del usuario todavía no se conocen
+const respuestasUsuario = ["", "", "", "", "", "", "", "", "", ""];
+
+// Llamamos a la función validarRespuestas para comprobar las respuestas del usuario
+const numRespuestasCorrectas = validarRespuestas(respuestasUsuario, respuestasCorrectas);
+
+// Mostramos el número de respuestas correctas
+console.log(`El usuario ha obtenido ${numRespuestasCorrectas} respuestas correctas de 0`);
