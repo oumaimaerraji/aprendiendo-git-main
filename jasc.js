@@ -75,7 +75,6 @@ var respuestacss4 = ['none', ' background-size', ':focus', 'fixed', 'auto', 'fon
 var correctascss = ['inline', ' background-image', ':hover', 'static', 'visible', 'font-size', ':active', 'letter-spacing', ':visited', 'line-height', 'border-style', ':focus', 'border-width', 'opacity', 'border-width', ':disabled', 'background-color', 'position',]
 
 
-
 //form
 var pregform = [
 
@@ -142,45 +141,4 @@ function siguiente(){
 // -------------------------------------------------FUNCION DE VALIDAR RESPUESTA--------------------------------------------------------
 
 
-function validarRespuesta(respuestaUsuario, respuestaCorrecta) {
-        // Comprobamos si la respuesta del usuario es igual a la respuesta correcta
-        if (respuestaUsuario === respuestaCorrecta) {
-            // Si es así, devolvemos true
-            return true;
-        } else {
-            // Si no, devolvemos false
-            return false;
-        }
-    }
-  
-  function validarRespuestas(respuestasUsuario, respuestasCorrectas) {
-        // Creamos una variable para almacenar el número de respuestas correctas
-        let numRespuestasCorrectas = 0;
 
-        // Iteramos a través de las respuestas del usuario y las respuestas correctas
-        for (let i = 0; i < respuestasUsuario.length; i++) {
-            // Comprobamos si el usuario ha respondido a la pregunta
-            if (respuestasUsuario[i] !== "") {
-                // Si el usuario ha respondido, comparamos su respuesta con la respuesta correcta correspondiente
-                if (validarRespuesta(respuestasUsuario[i], respuestasCorrectas[i])) {
-                    // Si la respuesta es correcta, incrementamos el contador de respuestas correctas
-                    numRespuestasCorrectas++;
-                }
-            }
-        }
-
-        // Devolvemos el número total de respuestas correctas
-        return numRespuestasCorrectas;
-    }
-
-  // Supongamos que las respuestas correctas son las siguientes (en este caso, todas las respuestas son "A")
-  const respuestasCorrectas = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A"];
-
-// Supongamos que las respuestas del usuario todavía no se conocen
-const respuestasUsuario = ["", "", "", "", "", "", "", "", "", ""];
-
-// Llamamos a la función validarRespuestas para comprobar las respuestas del usuario
-const numRespuestasCorrectas = validarRespuestas(respuestasUsuario, respuestasCorrectas);
-
-// Mostramos el número de respuestas correctas
-console.log(`El usuario ha obtenido ${numRespuestasCorrectas} respuestas correctas de 0`);
